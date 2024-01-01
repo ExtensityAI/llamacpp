@@ -1,16 +1,20 @@
 {
     "version": "0.0.1",
     "name": "ExtensityAI/llamacpp",
-    "description": "<Project Description>",
+    "description": "Running a Llama server as a Neuro-Symbolic backend. This backend is a wrapper around the LlamaCpp project.",
     "expressions": [
         {
-            "module": "src/func",
-            "type": "MyExpression"
+            "module": "src/engine",
+            "type": "LLaMACppClientEngine"
+        },
+        {
+            "module": "src/config",
+            "type": "EngineConfig"
         }
     ],
     "run": {
-        "module": "src/func",
-        "type": "MyExpression"
+        "module": "src/config",
+        "type": "EngineConfig"
     },
     "dependencies": []
 }
