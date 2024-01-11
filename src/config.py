@@ -7,8 +7,8 @@ from .engine import LLaMACppClientEngine
 
 
 class EngineConfig(Expression):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
 
     def forward(self, model: str, host: str = 'http://localhost', port: int = 8080, *args, **kwargs):
 
